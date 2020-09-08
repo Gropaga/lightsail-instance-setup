@@ -16,3 +16,4 @@ curl -o /etc/systemd/system/docker-compose-app.service https://raw.githubusercon
 systemctl enable docker-compose-app
 
 mkdir /app
+sudo chown ubuntu:ubuntu /app
