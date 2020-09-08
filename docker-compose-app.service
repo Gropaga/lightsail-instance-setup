@@ -10,9 +10,9 @@ After=docker.service
 Type=oneshot
 RemainAfterExit=yes
 # match the below to wherever you copied your docker-compose.yml
-WorkingDirectory=/srv/docker
-ExecStart=/app/docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
-ExecStop=/app/docker-compose down
+WorkingDirectory=/app
+ExecStart=/usr/local/bin/docker-compose -f /app/docker-compose.yml -f /app/docker-compose.prod.yml up -d
+ExecStop=/usr/local/bin/docker-compose down
 TimeoutStartSec=0
 
 [Install]
